@@ -36,6 +36,16 @@ main#content{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    h3.section-title{
+      position: relative;
+      font-size: 3rem;
+      line-height: 3.1rem;
+      color: $primary-text-color;
+      padding-bottom: 15px;
+      margin: 0 0 50px;
+      font-weight: 300;
+    }
   }
   &.content-fixed{
     height: 100vh;
@@ -49,3 +59,4 @@ main#content{
 
 // Partials
 @import "./partials/welcome_slider";
+@import "./partials/excellence";

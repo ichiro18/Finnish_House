@@ -1,0 +1,48 @@
+.excellence-grid{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .excellence-item{
+    width: 20%;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px 25px 0;
+    margin: 15px 15px 40px;
+    .icon{
+      position: absolute;
+      top: -35px;
+      background-color: #fff;
+      border: 1px solid #eee;
+      height: 70px;
+      width: 70px;
+      font-size: 26px;
+      color: #bbb;
+      text-align: center;
+      z-index: 11;
+      margin-bottom: 15px;
+      line-height: 70px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      left: 50%;
+      margin-left: -35px;
+      i{
+        transform: rotate(-45deg);
+      }
+    }
+    .desc{
+      text-align: center;
+      h4.title{
+        font-size: 18px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+      }
+      p{
+        font-size: 14px;
+        line-height: 1.8;
+        color: #777;
+      }
+    }
+  }
+}
