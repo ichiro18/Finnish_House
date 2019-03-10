@@ -1,6 +1,7 @@
 @import "config/vendor";
 @import "config/variables";
 
+
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -44,3 +45,7 @@ main#content{
 .swiper-pagination-bullet-active{
   background: $primary-color;
 }
+
+
+// Partials
+@import "./partials/welcome_slider";

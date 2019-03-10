@@ -2,7 +2,7 @@ exports.config = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|webp|svg|ico)(\?.*)$/,
+        test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'file-loader',
           options: {
