@@ -1,6 +1,14 @@
 html
   head
     meta(charset='UTF-8')
-    title Test
+    title Финские дома за 1 день
   body
-    h1='Финские дома за 1 день'
+    main#content.swiper-container
+      div.swiper-wrapper
+        include partials/welcome_slider
+        include partials/excellence
+        include partials/service
+        include partials/process
+        include partials/portfolio
+        include partials/contact
+      div.swiper-pagination.swiper-pagination-v

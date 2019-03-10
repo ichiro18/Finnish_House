@@ -1,4 +1,5 @@
 // Styles
-import './style/main.scss';
-
-console.log('hello-world');
+import './style/index.scss';
+// Scripts
+import './scripts/index';
+// Template

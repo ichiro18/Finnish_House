@@ -1,0 +1,51 @@
+@import "config/vendor";
+@import "config/variables";
+
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+/* global box-sizing */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+/* html element 62.5% font-size for REM use */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 11px/1.4 'Roboto', Roboto, Helvetica, Arial, sans-serif;
+  color: $primary-text-color;
+}
+
+
+/*------------------------------------*\
+    Content
+\*------------------------------------*/
+main#content{
+  width: 100%;
+  height: 100%;
+  .content-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.content-fixed{
+    height: 100vh;
+  }
+}
+
+.swiper-pagination-bullet-active{
+  background: $primary-color;
+}
+
+
+// Partials
+@import "./partials/welcome_slider";
