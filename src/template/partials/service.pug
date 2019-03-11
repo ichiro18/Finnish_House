@@ -1,2 +1,195 @@
-section.swiper-slide.content-section
-  h1 service
+section.swiper-slide.content-section.service-section
+  h3.section-title Выбор типовых проектов
+  div.service-wrapper
+    div.service-item
+      div.image-wrapper
+        div.image(style="background-image: url('"+require('../../images/project/dom33m.jpg')+"');")
+      div.desc
+        h4.title Финский дом 33 м
+          sup 2
+        span.price от 668 000 руб
+        p.
+          Готовый жилой дом для круглогодичного проживания по цене автомобиля. В несколько раз теплее деревянного. Монтаж 1 день. Срок производства - 30 дней.
+        div.action-buttons
+          div.read-more
+            i.fas.fa-search
+            span Узнать больше
+          div.see-comp
+            i.far.fa-clipboard
+            span Посмотреть планировку
+          div.answer
+            i.far.fa-question-circle
+            span Получить консультацию
+    div.service-item
+      div.image-wrapper
+        div.image(style="background-image: url('"+require('../../images/project/dom52.jpg')+"');")
+      div.desc
+        h4.title Финский дом 52 м
+          sup 2
+        span.price от 795 000 руб
+        p.
+          Готовый жилой дом для круглогодичного проживания с 3-мя спальнями. Монтаж за 1 день. Срок производства - 45 дней.
+        div.action-buttons
+          div.read-more
+            i.fas.fa-search
+            span Узнать больше
+          div.see-comp
+            i.far.fa-clipboard
+            span Посмотреть планировку
+          div.answer
+            i.far.fa-question-circle
+            span Получить консультацию
+    div.service-item
+      div.image-wrapper
+        div.image(style="background-image: url('"+require('../../images/project/norhouse64m.jpg')+"');")
+      div.desc
+        h4.title Финский дом 64 м
+          sup 2
+        span.price от 999 000 руб
+        p.
+          Готовый жилой дом для круглогодичного проживания для семьи из 4 человек. Уникальный скандинавский дизайн. Срок производства - от 45 дней.
+        div.action-buttons
+          div.read-more
+            i.fas.fa-search
+            span Узнать больше
+          div.see-comp
+            i.far.fa-clipboard
+            span Посмотреть планировку
+          div.answer
+            i.far.fa-question-circle
+            span Получить консультацию
+    div.service-item
+      div.image-wrapper
+        div.image(style="background-image: url('"+require('../../images/project/banya33m.jpg')+"');")
+      div.desc
+        h4.title Финская баня 33м
+          sup 2
+        span.price от 668 000 руб
+        p.
+          Готовый гостевой дом-баня для круглогодичного использования. Полная комплектация. Монтаж 1 день. Срок производства - 40 дней.
+        div.action-buttons
+          div.read-more
+            i.fas.fa-search
+            span Узнать больше
+          div.see-comp
+            i.far.fa-clipboard
+            span Посмотреть планировку
+          div.answer
+            i.far.fa-question-circle
+            span Получить консультацию
+  div#get_cons_template(style="display: none")
+    form.get-cons-form
+      h3 Получить консультацию
+      div.form-fields
+        div.form-group
+          div.form-field
+            input(type="text", placeholder="Ваше имя", required)
+          div.form-field
+            input(type="text", placeholder="Номер телефона", required)
+          div.form-field
+            select
+              option Финский дом 33 м
+              option Финский дом 52 м
+              option Финский дом 64 м
+              option Финская баня 33м
+        div.form-group
+          div.form-field
+            textarea(placeholder="Сообщение")
+  div#see_more_template(style="display: none")
+    table.equipment
+      thead
+        th
+          td Базовая
+          td Комфорт
+          td Люкс
+      tbody
+        tr
+          td.column-title Фундамент
+          td(colspan=3) Рассчитывается отдельно
+        tr
+          td.column-title Гидроизоляция
+          td(colspan=3) Рубероид в два слоя
+        tr
+          td.column-title Обвязка
+          td ?? Двойная (первый и второй ряд) обрезной брус 150х150 мм
+          td ?? Двойная (первый и второй ряд) обрезной брус 150х150 мм Обработка антисептиком.
+          td ?? Двойная (первый ряд) обрезной брус 200х150 мм, (второй ряд) 200х200 мм Обработка антисептиком.
+        tr
+          td.column-title Лаги 1-го этажа
+          td Обрезная доска 40х150 мм, с шагом 580 мм.
+          td Обрезная доска 40х150 мм, с шагом 580 мм. Обработка антисептиком
+          td Обрезная доска 40х150 мм, с шагом 580 мм. Обработка антисептикомtr
+        tr
+          td.column-title Черновой пол
+          td ?? Не выполнен
+          td ?? Не выполнен
+          td ?? Не выполнен
+        tr
+          td.column-title Наружные стены
+          td(colspan=3) Имитация бруса 16х135 мм. Обработка антисептиком
+        tr
+          td.column-title Перегородки 1-го этажа
+          td(colspan=3) ?? Имитация бруса 16х135 мм. Обработка антисептиком
+        tr
+          td.column-title Высота 1-го этажа
+          td 2,40 м (+/- 5 см) 18 венцов
+          td 2,56 м (+/- 5 см) 19 венцов
+          td 2,70 м (+/- 5 см) 20 венцов
+        tr
+          td.column-title Стропильная система
+          td Обрезная доска 40х150 мм (с шагом 580 мм). Стойки и раскосы из обрезной доски 40х150 мм. Подстропильная балка из обрезной доски 40х150 мм (с шагом 580 мм).
+          td Обрезная доска 40х150 мм (с шагом 580 мм). Стойки и раскосы из обрезной доски 40х150 мм. Подстропильная балка из обрезной доски 40х150 мм (с шагом 580 мм).
+          td Обрезная доска 40х150 мм (с шагом 580 мм). Стойки и раскосы из обрезной доски 40х150 мм. Подстропильная балка из обрезной доски 40х150 мм (с шагом 580 мм).
+        tr
+          td.column-title Ветро-влагозащитная паропраницаемая мембрана, под кровлю
+          td(colspan=3) Ондутис «А» или (Аналоги)
+        tr
+          td.column-title Контр-рейка под кровельное покрытие
+          td(colspan=3) Обрезной брусок 40х50 мм
+        tr
+          td.column-title Фронтоны
+          td Обрезная доска 40х150 мм, с прокладкой ветро-влагозащитной паропраницаемой мембраной, (Ондутис «А» или аналоги) и обшиты вагонкой естественной влажности. Установка вентиляционных решеток
+          td Обрезная доска 40х150 мм, с прокладкой ветро-влагозащитной паропраницаемой мембраной, (Ондутис «А» или аналоги) и обшиты сухой вагонкой. Установка вентиляционных решеток
+          td Обрезная доска 50х200 мм, с прокладкой ветро-влагозащитной паропраницаемой мембраной, (Ондутис «А» или аналоги) и обшиты сухим блок-хаусом. Установка вентиляционных решеток
+        tr
+          td.column-title Кровельное покрытие
+          td Рубероид в один слой
+          td Ондулин.  Цвет на выбор (Красный, Коричневый, Зелёный)
+          td Металлочерепица. Цвет на выбор (Красный, Коричневый, Зелёный)
+        tr
+          td.column-title Обсадные ройки
+          td(colspan=3) В оконных и дверных проёмах оставляются перевязочные брусья
+        tr
+          td.column-title Сборка сруба
+          td(colspan=3) Металлические гвозди 200 мм, с засверливанием
+        tr
+          td.column-title Угловое соединение
+          td В пол бруса
+          td В Тёплый угол (шип-паз)
+          td «Ласточкин хвост»
+        tr
+          td.column-title Свесы крыши (ширина 450 - 500 мм)
+          td Без отделки.
+          td Подшиты сухой вагонкой.
+          td Подшиты софитами.
+        tr
+          td.column-title Монтаж водосточной системы
+          td Установка горизонтальных желобов и вертикальных сливных труб. Материал пластик. (цвет на выбор: Красный, Коричневый, Зелёный).
+          td Установка горизонтальных желобов и вертикальных сливных труб. Материал пластик. (цвет на выбор: Красный, Коричневый, Зелёный).
+          td Установка горизонтальных желобов и вертикальных сливных труб. Материал пластик. (цвет на выбор: Красный, Коричневый, Зелёный).
+        tr
+          td.column-title Монтаж снегозадержателей
+          td Не выполнен
+          td Не выполнен
+          td Металлические. Цвет на выбор (Красный, Коричневый, Зелёный)
+        tr
+          td.column-title Сборка
+          td(colspan=3) Включена
+        tr
+          td.column-title Доставка
+          td(colspan=3) Рассчитывается отдельно
+        tr
+          td.column-title Отделка
+          td Чистовая
+          td С мебелью
+          td С бытовой техникой
