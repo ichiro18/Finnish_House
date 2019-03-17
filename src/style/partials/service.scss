@@ -134,7 +134,47 @@
   font-size: 18px
 }
 .equipment{
-  td {
-    border: 1px solid black;
+  table {
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
   }
+  .table-header {
+    th{
+      padding: 20px 15px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: black;
+      text-transform: uppercase;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      .price{
+        color: $primary-color;
+      }
+    }
+  }
+  .table-content{
+    height:400px;
+    overflow-x:auto;
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    td {
+      padding: 15px;
+      text-align: left;
+      vertical-align:middle;
+      font-weight: 300;
+      font-size: 12px;
+      color: #777;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      &:first-child {
+        color: black;
+      }
+    }
+  }
+}
+.plan{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
