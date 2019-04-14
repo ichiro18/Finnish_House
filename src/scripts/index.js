@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Swiper from "swiper";
 import tingle from 'tingle.js';
+import '@fancyapps/fancybox';
 
 $(document).ready(() => {
   // set content width
@@ -23,6 +24,9 @@ $(document).ready(() => {
     $('.table-header').css({'padding-right':scrollWidth});
   }).resize();
 
+  $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+  });
 
   // * Modals
   // get consultation

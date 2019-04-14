@@ -1,0 +1,11 @@
+@import "../config/variables";
+
+.portfolio-section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  img{
+    height: 250px;
+    width: 250px;
+  }
+}
