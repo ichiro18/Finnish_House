@@ -33,7 +33,7 @@ let devServerConfig = function() {
 };
 
 const devConfig = {
-  mode: 'development',
+  mode: 'production',
   entry: path.join(PATH.source, 'main.js'),
   output: {
     path: PATH.dist,
@@ -65,7 +65,6 @@ const devPlugins = {
       }
     }),
     new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin()
   ]
 };
 

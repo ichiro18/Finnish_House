@@ -1,0 +1,180 @@
+@import "../config/variables";
+
+.service-section {
+  background-color: #fafafa;
+  padding: 0 15px;
+  .service-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .service-item {
+      display: flex;
+      width: calc(50% - 30px);
+      height: 400px;
+      margin: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: white;
+      .image-wrapper {
+        display: block;
+        width: 60%;
+        height: 100%;
+        .image {
+          width: 100%;
+          height: inherit;
+          background-size: cover;
+        }
+      }
+      .desc{
+        width: 40%;
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        h4.title{
+          font-size: 18px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          margin: 0;
+        }
+        .price{
+          font-size: 2rem;
+          color: $primary-color;
+        }
+        p{
+          font-size: 14px;
+          line-height: 1.8;
+          color: #777;
+        }
+        .action-buttons{
+          display: flex;
+          flex-direction: column;
+          div{
+            display: flex;
+            align-items: center;
+            color: $primary-text-color;
+            margin-bottom: 15px;
+            &:hover{
+              cursor: pointer;
+              color: $primary-color
+            }
+            i{
+              font-size: 2rem;
+              margin-right: 10px;
+              width: 20px;
+              text-align: center;
+            }
+            span{
+              font-weight: 300;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modals
+.get-cons-form{
+  display: flex;
+  flex-direction: column;
+  h3{
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+    text-align: center;
+  }
+  .form-fields{
+    display: flex;
+    .form-group{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 15px;
+      .form-field{
+        width: 100%;
+        margin-bottom: 20px;
+        input, select{
+          width: 100%;
+          height: 50px;
+          padding: 5px 18px;
+          font-size: 14px;
+          border: 2px solid rgba(0, 0, 0, 0.04);
+          &:focus{
+            border-color: $primary-color;
+            outline: none;
+          }
+        }
+        textarea{
+          width: 100%;
+          height: 100%;
+          padding: 10px 18px;
+          font-size: 14px;
+          border: 2px solid rgba(0, 0, 0, 0.04);
+          resize: vertical;
+          &:focus{
+            border-color: $primary-color;
+            outline: none;
+          }
+        }
+      }
+      &:last-child{
+        height: inherit;
+        .form-field{
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.modal-action-button{
+  background-color: $primary-color;
+  font-size: 18px
+}
+.equipment{
+  table {
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  .table-header {
+    th{
+      padding: 20px 15px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: black;
+      text-transform: uppercase;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      .price{
+        color: $primary-color;
+      }
+    }
+  }
+  .table-content{
+    height:400px;
+    overflow-x:auto;
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    td {
+      padding: 15px;
+      text-align: left;
+      vertical-align:middle;
+      font-weight: 300;
+      font-size: 12px;
+      color: #777;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      &:first-child {
+        color: black;
+      }
+    }
+  }
+}
+.plan{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

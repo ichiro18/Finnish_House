@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.config.js --mode development",
-    "build:dev": "webpack --config build/webpack.dev.config.js --mode development"
+    "build:dev": "webpack --config build/webpack.dev.config.js --mode development",
+    "build": "webpack --config build/webpack.prod.config.js --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -24,12 +25,14 @@
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "tingle.js": "^0.14.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.3.1",
     "normalize-scss": "^7.0.1",
     "roboto-fontface": "^0.10.0",

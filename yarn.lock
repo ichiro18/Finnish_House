@@ -592,6 +592,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@fancyapps/fancybox@^3.5.7":
+  version "3.5.7"
+  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.7.tgz#12f8734663ec6eae7f9236b92ca236e6e07fdfd5"
+  integrity sha512-rcEtu8t+WnmqIDV/Wfm1yvy/nDdwc7YV25j9HLxGC2/WOsUhk9rcWg2nB8g1BrjRt9zaoADdjHTU6ILYTJzBBg==
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.6.tgz#a7cfaaeee96e90c4c54da0e580aaff3f4cffacac"
@@ -5674,6 +5679,11 @@ timers-browserify@^2.0.4:
   integrity sha512-YvC1SV1XdOUaL6gx5CoGroT3Gu49pK9+TZ38ErPldOWW4j49GI1HKs9DV+KGq/w6y+LZ72W1c8cKz2vzY+qpzg==
   dependencies:
     setimmediate "^1.0.4"
+
+tingle.js@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/tingle.js/-/tingle.js-0.14.0.tgz#111bf8529f72484031b814b15e1a6ffb9dac2cee"
+  integrity sha512-etSON7XEz5QI5mvfAE+ibK9rOCouR0E7UpVeEkCfD0UFPY0+34fYGslyUH3b7g5PC5SZmfg9P93VSSvESacrpg==
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
