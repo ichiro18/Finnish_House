@@ -4,21 +4,6 @@ import tingle from 'tingle.js';
 import '@fancyapps/fancybox';
 
 $(document).ready(() => {
-  // set content width
-  $('#content').addClass('content-fixed');
-
-  let content_slider = new Swiper('#content', {
-    direction: 'vertical',
-    slidesPerView: 1,
-    spaceBetween: 30,
-    mousewheel: true,
-    shortSwipes: false,
-    pagination: {
-      el: '.swiper-pagination-v',
-      clickable: true
-    }
-  });
-
   $(window).on("load resize ", function() {
     var scrollWidth = $('.table-content').width() - $('.table-content table').width();
     $('.table-header').css({'padding-right':scrollWidth});

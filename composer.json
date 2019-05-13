@@ -1,0 +1,33 @@
+{
+  "name"        : "export-stroy/web",
+  "description" : "Default site for Export Stroy",
+  "authors"     : [
+    {
+      "name"    : "Ilya Zhuravlev",
+      "email": "ichirozcom@gmail.com"
+    }
+  ],
+  "type"        : "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url" : "https://wpackagist.org"
+    }
+  ],
+  "config"      : {
+    "vendor-dir": "app/content/vendor"
+  },
+  "require"     : {
+    "johnpbloch/wordpress"            : ">=5.0"
+  },
+  "require-dev" : {
+    "wpackagist-plugin/theme-check"               : "*"
+  },
+  "extra"       : {
+    "wordpress-install-dir": "app/wp",
+    "installer-paths": {
+      "app/content/plugins/{$name}/": ["vendor:wpackagist-plugin"],
+      "app/content/themes/{$name}/": ["vendor:wpackagist-theme"]
+    }
+  }
+}

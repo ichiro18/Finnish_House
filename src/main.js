@@ -1,5 +1,9 @@
-// Styles
+// * Styles
 import './style/index.scss';
-// Scripts
+// * Scripts
 import './scripts/index';
-// Template
+// * Images
+import './images/index';
+
+// ! Custom
+console.log("hello");
