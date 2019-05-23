@@ -12,8 +12,6 @@ services:
       - MYSQL_ROOT_HOST=%
     volumes:
       - db_data_local:/var/lib/mysql
-    ports:
-      - "3306:3306"
     labels:
       - "traefik.enable=false"
     networks:
@@ -47,9 +45,6 @@ services:
       - db
       - phpfpm
     restart: always
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - ./app:/var/www/html/app
       - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
