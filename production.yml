@@ -1,0 +1,72 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: ${APP_NAME}__database
+    restart: always
+    env_file:
+      - .env
+      - .envs/prod/database.env
+    environment:
+      - MYSQL_ROOT_HOST=%
+    volumes:
+      - db_data_local:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - traefik_proxy
+
+  phpfpm:
+    build:
+      context: .
+      dockerfile: ./provision/application/php-fpm/Dockerfile
+    container_name: ${APP_NAME}__web
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - .env
+      - .envs/prod/database.env
+      - .envs/prod/web.env
+    volumes:
+      - .:/var/www/html
+      # - ./app:/var/www/html/app
+      # - ./composer.json:/var/www/html/composer.json
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - traefik_proxy
+
+  nginx:
+    image: nginx:latest
+    container_name: ${APP_NAME}__proxy
+    depends_on:
+      - db
+      - phpfpm
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./app:/var/www/html/app
+      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./config/certs:/etc/nginx/certs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=${APP_NAME}"
+      - "traefik.frontend.rule=Host:${DOMAIN_NAME}"
+      - "traefik.port=80"
+      - "traefik.docker.network=traefik_proxy"
+    networks:
+      - traefik_proxy
+
+volumes:
+  db_data_local: {}
+
+networks:
+  traefik_proxy:
+    external:
+      name: traefik_proxy
