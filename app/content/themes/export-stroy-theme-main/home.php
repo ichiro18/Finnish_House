@@ -142,19 +142,10 @@
                 </div>
             </div>
             <div id="get_cons_template" style="display: none;">
-                <form class="get-cons-form">
+                <div class="get-cons-form">
                     <h3>Получить консультацию</h3>
-                    <div class="form-fields">
-                        <div class="form-group">
-                            <div class="form-field"><input type="text" placeholder="Ваше имя" required="required" /></div>
-                            <div class="form-field"><input type="text" placeholder="Номер телефона" required="required" /></div>
-                            <div class="form-field"><select><option>Финский дом 33 м</option><option>Финский дом 52 м</option><option>Финский дом 64 м</option><option>Финская баня 33м</option></select></div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-field"><textarea placeholder="Сообщение"></textarea></div>
-                        </div>
-                    </div>
-                </form>
+                    <?php echo do_shortcode('[contact-form-7 id="6" title="Получить консультацию (модаль)"]'); ?>
+                </div>
             </div>
             <!-- Спецификации-->
             <div id="see_more_template_h33" style="display: none;">
@@ -766,18 +757,12 @@
                     <div class="info-field"><span class="title">ОГРН</span><span class="value">1197627005828</span></div>
                     <div class="info-field"><span class="title">КПП</span><span class="value">760401001</span></div>
                     <div class="info-field"><span class="title">Телефон</span><a class="value">+79128217589</a></div>
-                    <div class="info-field"><span class="title">Электронная почта</span><a class="value">alexann777@mail.ru</a></div>
+                    <div class="info-field"><span class="title">Электронная почта</span><a class="value">info@export-stroy.ru</a></div>
                 </div>
-                <form class="contact-form">
+                <div class="contact-form">
                     <h4>Получить бесплатную консультацию</h4>
-                    <div class="form-fields">
-                        <div class="form-group">
-                            <div class="form-field"><input type="text" placeholder="Ваше имя" required="required" /></div>
-                            <div class="form-field"><input type="text" placeholder="Номер телефона" required="required" /></div>
-                            <div class="form-field"><select><option>Финский дом 33 м</option><option>Финский дом 52 м</option><option>Финский дом 64 м</option><option>Финская баня 33 м</option></select></div>
-                            <div class="form-field"><textarea placeholder="Сообщение"></textarea></div>
-                        </div>
-                    </div><a class="button">Получить консультацию</a></form>
+                    <?php echo do_shortcode('[contact-form-7 id="5" title="Получить консультацию"]'); ?>
+                </div>
             </div>
         </section>
     </main>

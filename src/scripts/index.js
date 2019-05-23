@@ -24,14 +24,11 @@ $(document).ready(() => {
   });
   // set content
   get_cons.setContent($('#get_cons_template').html());
-  // add a button
-  get_cons.addFooterBtn('Получить консультацию', 'tingle-btn tingle-btn--pull-right modal-action-button', function() {
-    // here goes some logic
-    get_cons.close();
-  });
   // open modal
   $('.answer').click((e) => {
-    console.log(e.target);
+    get_cons.open();
+  });
+  $('.action-button').click((e) => {
     get_cons.open();
   });
 
@@ -66,11 +63,6 @@ $(document).ready(() => {
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: "Закрыть",
     cssClass: ['get_cons'],
-  });
-
-  see_more.addFooterBtn('Заказать', 'tingle-btn tingle-btn--pull-right modal-action-button', function() {
-    // here goes some logic
-    see_more.close();
   });
   $('.read-more').click((e) => {
     const header = $(e.target).closest('.desc').children('.title').text();
