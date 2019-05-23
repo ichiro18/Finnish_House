@@ -60,6 +60,8 @@ RUN { \
 VOLUME /var/www/html
 WORKDIR /var/www/html
 
+RUN chown -R www-data:www-data /var/www
+
 COPY /provision/application/php-fpm/entrypoint.sh /usr/local/bin/
 RUN sed -i 's/\r//' /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
