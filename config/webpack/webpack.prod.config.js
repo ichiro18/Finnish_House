@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 // * Plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin/dist/clean-webpack-plugin");
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 // * Loaders
 const scriptLoader = require('./loader/script.loader');
@@ -33,7 +33,7 @@ let devServerConfig = function() {
 };
 
 const devConfig = {
-  mode: 'development',
+  mode: 'production',
   entry: path.join(PATH.source, 'main.js'),
   output: {
     path: PATH.dist,
@@ -65,7 +65,6 @@ const devPlugins = {
       }
     }),
     new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin()
   ]
 };
 

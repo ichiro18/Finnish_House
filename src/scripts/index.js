@@ -4,21 +4,6 @@ import tingle from 'tingle.js';
 import '@fancyapps/fancybox';
 
 $(document).ready(() => {
-  // set content width
-  $('#content').addClass('content-fixed');
-
-  let content_slider = new Swiper('#content', {
-    direction: 'vertical',
-    slidesPerView: 1,
-    spaceBetween: 30,
-    mousewheel: true,
-    shortSwipes: false,
-    pagination: {
-      el: '.swiper-pagination-v',
-      clickable: true
-    }
-  });
-
   $(window).on("load resize ", function() {
     var scrollWidth = $('.table-content').width() - $('.table-content table').width();
     $('.table-header').css({'padding-right':scrollWidth});
@@ -39,14 +24,11 @@ $(document).ready(() => {
   });
   // set content
   get_cons.setContent($('#get_cons_template').html());
-  // add a button
-  get_cons.addFooterBtn('Получить консультацию', 'tingle-btn tingle-btn--pull-right modal-action-button', function() {
-    // here goes some logic
-    get_cons.close();
-  });
   // open modal
   $('.answer').click((e) => {
-    console.log(e.target);
+    get_cons.open();
+  });
+  $('.action-button').click((e) => {
     get_cons.open();
   });
 
@@ -81,11 +63,6 @@ $(document).ready(() => {
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: "Закрыть",
     cssClass: ['get_cons'],
-  });
-
-  see_more.addFooterBtn('Заказать', 'tingle-btn tingle-btn--pull-right modal-action-button', function() {
-    // here goes some logic
-    see_more.close();
   });
   $('.read-more').click((e) => {
     const header = $(e.target).closest('.desc').children('.title').text();

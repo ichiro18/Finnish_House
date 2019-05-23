@@ -2,13 +2,9 @@
 @import "~swiper/src/swiper";
 @import "../config/variables";
 
-.slide-content {
-  width: 100%;
-  height: 100%;
-
-  .welcome-slider {
+.welcome-slider {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     .welcome-block {
       display: flex;
@@ -17,6 +13,7 @@
       justify-content: center;
       width: 100%;
       height: 100%;
+      background-image: url("../images/slide1.jpg");
       background-size: cover;
 
       h3.welcome-title {
@@ -49,7 +46,6 @@
         font-weight: 300;
       }
     }
-  }
 }
 
 a.action-button.invert{
